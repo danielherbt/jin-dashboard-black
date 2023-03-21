@@ -26,7 +26,6 @@ from django.urls import path, include, re_path
 
 
 urlpatterns = [
-    path('', include('home.urls')),
     path("", include('admin_black.urls')),
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
@@ -42,6 +41,9 @@ urlpatterns = [
     path('api/escuelacobros/', include('api.schoolfees.urls')),
     path('api/ventas/', include('api.sales.urls')),
     path('api/documentos/', include('api.docs.urls')),
+    
+    # Leave `Home.Urls` as last the last line
+    path("", include("home.urls"))
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 urlpatterns +=[

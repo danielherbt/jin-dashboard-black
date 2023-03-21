@@ -33,8 +33,6 @@ DEBUG = False
 # Docker HOST
 #ALLOWED_HOSTS = ['localhost', '127.0.0.1','3.213.118.142','salespruebas.main-data.net']
 ALLOWED_HOSTS = ['*']
-# Add here your deployment HOSTS
-CSRF_TRUSTED_ORIGINS = ['http://localhost:8000', 'http://localhost:5085', 'http://127.0.0.1:8000', 'http://3.213.118.142:80']
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:    
@@ -79,6 +77,10 @@ MIDDLEWARE = [
 
 CORS_ALLOW_ALL_ORIGINS = True
 
+CURE_CROSS_ORIGIN_OPENER_POLICY = None
+
+# Add here your deployment HOSTS
+CSRF_TRUSTED_ORIGINS = ['http://localhost:8000', 'http://localhost:5085', 'http://127.0.0.1:8000', 'http://3.213.118.142:80', 'http://salespruebas.main-data.net:80', 'http://jin-dashboard-black.com:80' ]
 ROOT_URLCONF = "core.urls"
 
 HOME_TEMPLATES = os.path.join(BASE_DIR, 'home', 'templates')
