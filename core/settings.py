@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 import os, random, string
 from pathlib import Path
 from dotenv import load_dotenv
+from decouple import config
 
 load_dotenv()  # take environment variables from .env.
 
@@ -23,13 +24,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = config('SECRET_KEY')
 if not SECRET_KEY:
     SECRET_KEY = ''.join(random.choice( string.ascii_lowercase  ) for i in range( 32 ))
 
 # Render Deployment Code
-DEBUG = (os.getenv('DEBUG', 'False') == 'True')
-#DEBUG = True
+#DEBUG = (os.getenv('DEBUG', 'False') == 'True')
+DEBUG = (config('DEBUG','False') == 'True')
 # Docker HOST
 #ALLOWED_HOSTS = ['localhost', '127.0.0.1','3.213.118.142','salespruebas.main-data.net']
 ALLOWED_HOSTS = ['*']
@@ -111,12 +112,12 @@ WSGI_APPLICATION = "core.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DB_ENGINE   = os.getenv('DB_ENGINE'   , None)
-DB_USERNAME = os.getenv('DB_USERNAME' , None)
-DB_PASS     = os.getenv('DB_PASS'     , None)
-DB_HOST     = os.getenv('DB_HOST'     , None)
-DB_PORT     = os.getenv('DB_PORT'     , None)
-DB_NAME     = os.getenv('DB_NAME'     , None)
+DB_ENGINE   = config('DB_ENGINE'   , None)
+DB_USERNAME = config('DB_USERNAME' , None)
+DB_PASS     = config('DB_PASS'     , None)
+DB_HOST     = config('DB_HOST'     , None)
+DB_PORT     = config('DB_PORT'     , None)
+DB_NAME     = config('DB_NAME'     , None)
 
 if DB_ENGINE and DB_NAME and DB_USERNAME:
     DATABASES = { 
