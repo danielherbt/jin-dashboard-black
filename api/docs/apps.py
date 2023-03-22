@@ -5,3 +5,4 @@ class DocsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'api.docs'
     verbose_name = 'Documentos'
+    icon = 'icon-book-bookmark'
