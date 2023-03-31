@@ -1,0 +1,33 @@
+/* Automatically generated from health.json - do not edit */
+:root {
+	--neutral-color: 224,224,224;
+	--neutral-color-text: 0,0,0;
+	--primary-color: 170,210,186;
+	--primary-color-dark: 107,143,113;
+	--primary-color-light: 215,234,222;
+	--primary-color-text: 0,12,0;
+	--primary-color-dark-text: 255,255,255;
+	--primary-color-light-text: 29,30,24;
+	--secondary-color: 235,92,106;
+	--secondary-color-dark: 230,55,73;
+	--secondary-color-light: 244,164,172;
+	--secondary-color-text: 255,255,255;
+	--secondary-color-dark-text: 255,255,255;
+	--secondary-color-light-text: 73,9,15;
+	--error-color: 183,28,28;
+	--error-color-text: 255,255,255;
+	--background-color: 255,255,255;
+	--background-color-text: 0,0,0;
+	--border-color: 170,170,170;
+	--surface-color: 255,255,255;
+	--surface-color-text: 0,0,0;
+	--focusedrow-color: 66,66,66;
+	--focusedrow-color-text: 255,255,255;
+	--focusindicator-color: 51,138,209;
+	--dialog-color: 255,255,255;
+	--dialog-color-text: 0,0,0;
+	--dialogtitle-color: 255,255,255;
+	--dialogtitle-color-text: 0,0,0;
+	--disabled-color: 238,238,238;
+	--disabled-color-text: 170,170,170;
+}

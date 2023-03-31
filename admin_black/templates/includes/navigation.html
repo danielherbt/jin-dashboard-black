@@ -63,21 +63,23 @@
                         </p>
                     </a>
                     <ul class="dropdown-menu dropdown-navbar">
-                        <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Profile</a>
+                        <label>{{ request.user }}</label>
+                        <li class="dropdown-divider"></li>
+                        <li class="nav-link"><a href="{% url 'user_profile' %}" class="nav-item dropdown-item">Perfil</a>
                         </li>
-                        <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Settings</a>
-                        </li>
+                        {% comment %} <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Settings</a>
+                        </li> {% endcomment %}
                         <li class="dropdown-divider"></li>
                         {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
                         <li class="nav-link"><a href="{% url 'admin:password_change' %}" class="dropdown-item">
-                                Change Password</a></li>
-                        <li class="nav-link"><a href="{% url 'admin:logout' %}" class="nav-item dropdown-item">Log
-                                out</a></li>
+                                Cambiar Password</a></li>
+                        <li class="nav-link"><a href="{% url 'admin:logout' %}" class="nav-item dropdown-item">Cerrar
+                                Sesion</a></li>
                         {% else %}
 
                         <li><a href="{% url 'password_change' %}" class="dropdown-item">
-                                <i class="feather icon-lock"></i> Change Password</a></li>
+                                <i class="feather icon-lock"></i> Cambiar Password</a></li>
                         <li><a href="{% url 'logout' %}" class="dropdown-item"><i class="feather icon-lock"></i>
                                 Logout</a></li>
                         {% endif %}

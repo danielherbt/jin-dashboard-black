@@ -114,3 +114,11 @@ def upgrade(request):
     'segment': 'upgrade'
   }
     return render(request, 'pages/upgrade.html', context)
+
+@login_required(login_url='/accounts/auth-signin')
+def mobil(request):
+    context = {
+    'parent': 'pages',
+    'segment': 'upgrade'
+  }
+    return render(request, 'pages/mobil.html', context)

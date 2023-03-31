@@ -1,0 +1,33 @@
+/* Automatically generated from lemonade.json - do not edit */
+:root {
+	--neutral-color: 224,224,224;
+	--neutral-color-text: 10,21,31;
+	--primary-color: 228,228,110;
+	--primary-color-dark: 207,207,38;
+	--primary-color-light: 239,239,169;
+	--primary-color-text: 10,21,31;
+	--primary-color-dark-text: 255,255,255;
+	--primary-color-light-text: 29,30,24;
+	--secondary-color: 127,195,192;
+	--secondary-color-dark: 102,183,180;
+	--secondary-color-light: 158,209,207;
+	--secondary-color-text: 255,255,255;
+	--secondary-color-dark-text: 255,255,255;
+	--secondary-color-light-text: 73,9,15;
+	--error-color: 226,0,0;
+	--error-color-text: 255,255,255;
+	--background-color: 255,255,255;
+	--background-color-text: 0,0,0;
+	--border-color: 170,170,170;
+	--surface-color: 255,255,255;
+	--surface-color-text: 0,0,0;
+	--focusedrow-color: 66,66,66;
+	--focusedrow-color-text: 255,255,255;
+	--focusindicator-color: 255,190,222;
+	--dialog-color: 255,255,255;
+	--dialog-color-text: 0,0,0;
+	--dialogtitle-color: 255,255,255;
+	--dialogtitle-color-text: 0,0,0;
+	--disabled-color: 238,238,238;
+	--disabled-color-text: 170,170,170;
+}

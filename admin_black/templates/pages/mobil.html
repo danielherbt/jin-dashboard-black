@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" style="width: 100%; height: 100%;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!-- This makes mobile device support work -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=0">
+
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'assets/img/apple-icon.png' %}">
+   <link rel="icon" type="image/png" href="{% static 'assets/img/favicon.png' %}">
+    
+        <link href="{% static 'assets/omnis/css/core.css' %}" rel="stylesheet">
+    
+        <link href="{% static 'assets/omnis/css/all_comps.css' %}" rel="stylesheet">
+    
+
+    <!-- Edit user.css to specify any CSS classes assigned using the $cssclassname property -->
+    <link type="text/css" href="{% static 'assets/omnis/css/user.css" rel="stylesheet' %}" media="print, screen" />
+
+    
+        <script src="{% static 'assets/omnis/scripts/runtime.bundle.js' %}"></script>
+    
+        <script src="{% static 'assets/omnis/scripts/vendors.bundle.js' %}"></script>
+    
+        <script src="{% static 'assets/omnis/scripts/core_all_comps.bundle.js' %}"></script>
+    
+        <script src="{% static 'assets/omnis/scripts/core.bundle.js' %}"></script>
+    
+        <script src="{% static 'assets/omnis/scripts/all_comps.bundle.js' %}"></script>
+    
+
+    <!-- Edit the array below to add further client localization. The relevant language file should be in /scripts/locale/ -->
+    <script>var supportedLanguages = ["de", "es", "fr", "it"];</script>
+    
+    
+        <!-- The following placeholder is replaced with either a script tag for the remote task string table or nothing when there is no remote task string table -->
+        
+    
+    <title></title>
+</head>
+<body style="margin:0; overflow:auto; width:100%; height:100%;">
+<H1> Welcome to jin </H1>
+<!--
+    The omnisform object is where the Omnis JavaScript client remote form will be embedded in the browser.
+    The property data-webserverurl identifies the HTTP URL of either the Omnis development environment/runtime or the
+    Web Server (the latter case applies when using the Omnis web server plugin to run the Omnis application server along-side
+    a Web Server).
+    For example:
+        When testing with the development environment, the data-webserverurl might be http://127.0.0.1:5000.  In this case,
+        data-omnisserverandport is empty.
+
+        When using a Web Server, the data-webserverurl might be http://www.myhost.com/scripts/omnisapi.dll.  In this case, data-omnisserverandport
+        tells the Omnis web server plugin how to connect to the Omnis application server, so for example it might be "5000" if the Omnis
+        Application server is at port 5000 on the same machine as the web server, or "111.222.000.111:5000" if the Omnis application server
+        is at port 5000 on the machine with IP address 111.222.000.111.
+
+    data-omnislibrary and data-omnisclass identify the remote form to be used as the initial form hosted by the omnisform object.
+
+    data-dss specifies the designed screen sizes for the library.This attribute value is a comma separated list of portrait or square screen size names
+    from the eScreenSize object in ssz.js (Desktop is not required as it is always one of the designed screen sizes). E.g. data-dss="js320x480Portrait,js768x1024Portrait,js345x345"
+
+    The remaining parameters are parameters passed in the row variable parameter to $construct of the remote task and form.
+    If you add another Omnis object to the form, set its id to omnisobject2 and so on...
+
+		Special Parameters:
+			_PS_ in the data-webserverurl is replaced with the address of the server from which this HTML page is being served e.g.
+			If the page is at http://127.0.0.1:5000/jschtml/test.htm, then _PS_ will be replaced with http://127.0.0.1:5000
+
+			data-commstimeout is a timeout in seconds - when the client sends a message to the server it must respond within this timeout.
+			When the timeout occurs, the client asks the user if they want to continue waiting for the response, and they have the option to
+			abort the request.
+			A value of zero means no timeout is applied.
+
+			data-themename: The name of the default theme for clients to use (those that have not set an explicit theme using the 'settheme' $clientcommand).
+			The special value of upper cased '_jt_', if present in the TEMPLATE .htm file, will be replaced by Omnis' current $javascripttheme
+			property each time the form is tested with Ctrl-T.
+
+			data-appid: An identifier for the application as a whole which this form is part of.
+			Its only purpose currently is to set the scope of themes set with the 'settheme' $clientcommand
+			to pages on the same domain, with the same data-appid.
+			Defaults to '<lib name>.<form name>'
+
+			data-logcaching: If present, data will be collected on the local caching of class data etc in localStorage.
+			    This can be accessed by querying jOmnis.omnisInsts[0].cacheLogger. It has methods getCacheLog() & printLocalStorage().
+			    If given the value "verbose", it will print caching messages to the console.
+
+            data-onlycacheclasses: If present, ONLY cache class data for the specified classes in localStorage.
+                A comma-separated list of Remote Form classes whose data should be cached.
+                In the format "<library name>.<form name>". E.g: "myLib.jsForm1,myLib.jsForm2"
+                #STYLES is handled per-library. To enable caching of styles, add an entry "<library name>.#STYLES"
+-->
+<div id="omnisobject1" style="position:absolute; top:0; left:0; width:100%; height:100%;" data-webserverurl="http://3.213.118.142:7878/cgi-bin/nph-omniscgi" data-omnisserverandport="7878" data-omnislibrary="MeguedFrontEnd" data-omnisclass="JIN" data-themename="professional" data-appid="MeguedFrontEnd.JIN" data-dss="'js320x480Portrait','js768x1024Portrait'" data-param1="" data-param2="" data-commstimeout="0">
+</div>
+
+</body>
+</html>

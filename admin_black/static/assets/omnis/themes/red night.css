@@ -1,0 +1,33 @@
+/* Automatically generated from red night.json - do not edit */
+:root {
+	--neutral-color: 224,224,224;
+	--neutral-color-text: 20,20,25;
+	--primary-color: 215,38,56;
+	--primary-color-dark: 139,24,36;
+	--primary-color-light: 228,98,111;
+	--primary-color-text: 255,255,255;
+	--primary-color-dark-text: 255,255,255;
+	--primary-color-light-text: 29,30,24;
+	--secondary-color: 35,37,40;
+	--secondary-color-dark: 19,29,22;
+	--secondary-color-light: 114,122,131;
+	--secondary-color-text: 255,255,255;
+	--secondary-color-dark-text: 255,255,255;
+	--secondary-color-light-text: 255,255,255;
+	--error-color: 255,232,71;
+	--error-color-text: 19,29,22;
+	--background-color: 255,255,255;
+	--background-color-text: 0,0,0;
+	--border-color: 170,170,170;
+	--surface-color: 255,255,255;
+	--surface-color-text: 0,0,0;
+	--focusedrow-color: 66,66,66;
+	--focusedrow-color-text: 255,255,255;
+	--focusindicator-color: 112,203,225;
+	--dialog-color: 255,255,255;
+	--dialog-color-text: 0,0,0;
+	--dialogtitle-color: 255,255,255;
+	--dialogtitle-color-text: 0,0,0;
+	--disabled-color: 238,238,238;
+	--disabled-color-text: 170,170,170;
+}
