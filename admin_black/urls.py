@@ -13,7 +13,7 @@ urlpatterns = [
      path('typography/', views.typography, name='typography'),
      path('rtl/', views.rtl, name='rtl'),
      path('upgrade/', views.upgrade, name='upgrade'),
-     path('mobile/', views.mobile, name='mobile'),
+     #path('mobile/', views.mobile, name='mobile'),
 
      path('accounts/auth-signup/', views.auth_signup, name = 'auth_signup'),
      path('accounts/auth-signin/', views.AuthSignin.as_view(), name='auth_signin'),

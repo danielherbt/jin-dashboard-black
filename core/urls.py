@@ -42,7 +42,8 @@ urlpatterns = [
     path('api/ventas/', include('api.sales.urls')),
     path('api/documentos/', include('api.docs.urls')),
     # Leave `Home.Urls` as last the last line
-    path("", include("home.urls"))
+    path("", include("home.urls")),
+    path("", include("mobile.urls"))
 ]#+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 #urlpatterns +=[
