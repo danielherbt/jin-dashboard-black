@@ -60,7 +60,6 @@ INSTALLED_APPS = [
     'drf_spectacular',
     "corsheaders",
     "home",
-    "mobile",
 ]
 
 MIDDLEWARE = [
@@ -212,7 +211,7 @@ SPECTACULAR_SETTINGS = {
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = '/mobile/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 #if not DEBUG:
