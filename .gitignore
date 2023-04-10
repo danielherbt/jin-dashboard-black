@@ -1,8 +1,10 @@
 *.pyc
 *.DS_Store
 *.egg*
+__pycache__
 /dist/
 /.idea
+/.vscode
 /docs/_build/
 /node_modules/
 build/

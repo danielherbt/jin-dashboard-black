@@ -1,9 +1,10 @@
-#from rest_framework.decorators import action
+# from rest_framework.decorators import action
 from api.base.views import *
 from api.base.serializers.entitiesSerializers import *
 from api.base.serializers.personsSerializers import *
 from api.base.serializers.dependSerializers import *
 from api.base.serializers.docsSerializers import *
+
 
 class InstitutionViewSet(BaseTypeViewSet):
     serializer_class = InstitutionSerializer
@@ -17,7 +18,7 @@ class StudentViewSet(BaseTypeViewSet):
 
 class PeriodViewSet(BaseTypeViewSet):
     serializer_class = PeriodSerializer
-    queryset = Period.objects.all()   
+    queryset = Period.objects.all()
 
 
 class CareerViewSet(BaseTypeViewSet):
@@ -28,26 +29,34 @@ class CareerViewSet(BaseTypeViewSet):
 class LevelViewSet(BaseTypeViewSet):
     serializer_class = LevelSerializer
     queryset = Level.objects.all()
-  
+
 
 class ParallelViewSet(BaseTypeViewSet):
     serializer_class = ParallelSerializer
     queryset = Parallel.objects.all()
 
-    ###Sobreescribir el obtener un periodo
+    # Sobreescribir el obtener un periodo
     # @action(detail=True, methods=['post','get','patch'],url_path='code')
     # def get_for_code(self,pk):
     #     parallel = Parallel.objects.filter(pk=id)
     #     return parallel
 
+
 class KindViewSet(BaseTypeViewSet):
     serializer_class = KindSerializer
     queryset = Kind.objects.all()
+    # pagination_class = None
 
 
 class DebtViewSet(BaseViewSet):
     serializer_class = DebtSerializer
     queryset = Debt.objects.all()
+
+    def paginate_queryset(self, queryset, view=None):
+        if 'no_page' in self.request.query_params:
+            return None
+        else:
+            return self.paginator.paginate_queryset(queryset, self.request, view=self)
 
 
 class PaymentViewSet(BaseViewSet):
