@@ -76,17 +76,31 @@ MIDDLEWARE = [
     #'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
 
-SECURE_CROSS_ORIGIN_OPENER_POLICY = None
+CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ALLOW_CREDENTIALS = True
 
 # Add here your deployment HOSTS
-CSRF_TRUSTED_ORIGINS = ['http://localhost:8000', 'http://127.0.0.1:8000', 'http://3.213.118.142:80', 'http://salespruebas.main-data.net:80']
-ROOT_URLCONF = "core.urls"
+CSRF_TRUSTED_ORIGINS = ['http://localhost:8000', 'http://127.0.0.1:8000', 'http://3.213.118.142', 'http://salespruebas.main-data.net']
+
+CORS_REPLACE_HTTPS_REFERER = True
+
+CSRF_COOKIE_DOMAIN = 'main-data.net'
+
+CORS_ORIGIN_WHITELIST = (
+    'http://salespruebas.main-data.net/',
+    'main-data.net',
+)
 
 CORS_ALLOWED_ORIGIN_REGEXES = [
-    r"^http://\w+\.jin-dashboard-black\.com$",
+    r"^http://\w+\.salespruebas\.main-data\.net$",
 ]
+
+#SECURE_CROSS_ORIGIN_OPENER_POLICY = None
+
+ROOT_URLCONF = "core.urls"
 
 HOME_TEMPLATES = os.path.join(BASE_DIR, 'home', 'templates')
 
