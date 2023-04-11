@@ -100,7 +100,7 @@ CORS_ALLOWED_ORIGIN_REGEXES = [
     r"^http://\w+\.salespruebas\.main-data\.net$",
 ]
 
-#SECURE_CROSS_ORIGIN_OPENER_POLICY = None
+SECURE_CROSS_ORIGIN_OPENER_POLICY = None
 
 ROOT_URLCONF = "core.urls"
 
