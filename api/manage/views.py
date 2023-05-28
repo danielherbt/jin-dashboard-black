@@ -48,7 +48,7 @@ class UserDbViewSet(BaseTypeViewSet):
     permission_classes = [IsAuthenticated]
     
     filterset_fields = {'user__email' : ['exact'],}
-
+    search_fields = ['user__email']
     serializer_class = UserDbSerializer
     queryset = UsersDb.objects.all()    
 
