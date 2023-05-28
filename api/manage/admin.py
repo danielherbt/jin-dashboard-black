@@ -34,7 +34,7 @@ class UserDbAdmin(admin.ModelAdmin):
     list_display_links = ('pk','code', 'connect')
     search_fields = ('name', 'code', 'connect__name','company__name','user__name')
     date_hierarchy = 'created'
-    prepopulated_fields = {"code": ('user','connect','company','name')}
+    prepopulated_fields = {"code": ('name',)}
     
     # Para agregar acciones a los seleccionados
     # https://coffeebytes.dev/el-django-admin-panel-y-su-personalizacion/

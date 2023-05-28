@@ -73,7 +73,6 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     'simple_history.middleware.HistoryRequestMiddleware',
-    #'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
@@ -92,8 +91,8 @@ CORS_REPLACE_HTTPS_REFERER = True
 CSRF_COOKIE_DOMAIN = 'main-data.net'
 
 CORS_ORIGIN_WHITELIST = (
-    'http://salespruebas.main-data.net/',
-    'main-data.net',
+    'http://salespruebas.main-data.net',
+    'https://main-data.net',
 )
 
 CORS_ALLOWED_ORIGIN_REGEXES = [

@@ -136,7 +136,7 @@ class UsersDb(TypesBaseModel):
     connect = models.ForeignKey(ConnectDb, verbose_name='Conexion', help_text='Perfil de Conexion',on_delete=models.RESTRICT)
 
     name = models.CharField(verbose_name='Base de Datos', max_length=100,help_text='Nombre de la Base de Datos',blank=False,null=False,unique=False)
-    code = models.SlugField(verbose_name='Código', max_length=50,help_text='Código Único (Usuario-Conexion-Compania-BaseDatos)',unique=True,blank=False,null=False)
+    code = models.SlugField(verbose_name='Código', max_length=50,help_text='Código Único (Usuario-Compania-BaseDatos)',unique=True,blank=False,null=False)
 
     class Meta:
         """Meta definition for BaseModel."""
