@@ -93,6 +93,7 @@ CSRF_COOKIE_DOMAIN = 'main-data.net'
 CORS_ORIGIN_WHITELIST = (
     'http://salespruebas.main-data.net',
     'https://main-data.net',
+    'http://3.213.118.142',
 )
 
 CORS_ALLOWED_ORIGIN_REGEXES = [
@@ -235,7 +236,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = "django.db.Falsemodels.BigAutoField"
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 LOGIN_REDIRECT_URL = '/'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

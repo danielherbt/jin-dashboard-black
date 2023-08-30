@@ -21,6 +21,10 @@ admin.site.register(ConnectDb,ConnectDbAdmin)
 admin.site.register(Genre)
 
 
+def jls_extract_def():
+    return 'name'
+
+
 class UserDbAdmin(admin.ModelAdmin):
     fieldsets = (
         ('Información para la Conexión del Usuario', {
@@ -34,7 +38,7 @@ class UserDbAdmin(admin.ModelAdmin):
     list_display_links = ('pk','code', 'connect')
     search_fields = ('name', 'code', 'connect__name','company__name','user__name')
     date_hierarchy = 'created'
-    prepopulated_fields = {"code": ('name',)}
+    prepopulated_fields = {"code": ['name','user']}
     
     # Para agregar acciones a los seleccionados
     # https://coffeebytes.dev/el-django-admin-panel-y-su-personalizacion/
@@ -47,7 +51,7 @@ class UserDbAdmin(admin.ModelAdmin):
     #icon_name = 'recent_actors'
 
     ### Desplegar atributos de tabla relacionada
-    #def Codigo(self, obj):
+    #def codigo(self, obj):
     #    return obj.user.username +'/' + obj.connect.name +'/' + obj.name    
  
 admin.site.register(UsersDb, UserDbAdmin)
